@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  font-family: 'Roboto', sans-serif;
+}
+.drop-area {
+  border: 2px dashed #007BFF;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.drop-area.hover {
+  background-color: #e7f3ff;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  gap: 20px; /* Промежутки между элементами */
+}
+
+.chess-item {
+  padding: 20px;
+  border: 1px solid #ccc; /* Добавляем рамку для визуализации */
+  border-radius: 8px;
+}
+
+/* Для изменения цвета фона в шахматном порядке */
+.chess-item:nth-child(odd) {
+  background-color: #f9f9f9; /* Светлый фон для нечетных элементов */
+}
+
+.chess-item:nth-child(even) {
+  background-color: #e9e9e9; /* Темный фон для четных элементов */
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+@keyframes example {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: example 5s infinite;
+}
+
+.animated-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.animated-button:active {
+  transform: scale(0.9);
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animated-button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-button {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 5px;
+  }
+}

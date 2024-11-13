@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверочная работа</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header> <!-- Заголовок сайта -->
+      <h1>Проверочная работа</h1>
+    </header>
+
+  <nav> <!-- Навигация по сайту -->
+    <ul>
+      <li><a href="index.html">Вторая страница</a></li>
+      <li><a href="https://vk.com" target="_blank">Сторонний сайт</a></li>
+      <li><a href="#text-block">Перейти к блоку текста</a></li>
+    </ul>
+  </nav>
+
+  <main>
+      <br>
+      <h1>Это main</h1>
+
+      <section id="text-block"> <!-- Блок с текстом -->
+        <h2>Теги для работы с текстом</h2>
+        <p>Это пример использования тега <strong>strong</strong> для выделения важного текста.</p>
+        <p>Также можно использовать <em>курсив</em> для выделения.</p>
+        <p>Для абзацев используем тег <p>.</p>
+        <p>Это <b>жирный текст</b>, <i>курсивный текст</i>, <u>подчеркнутый текст</u>, и <mark>выделенный текст</mark>.</p>
+      </section>
+      <section> <!-- Блок с таблицей -->
+        <h2>Таблица</h2>
+        <table border="1" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <td rowspan="2">1</td>
+            <td colspan="2">2</td>
+            <td colspan="2">3</td>
+            <td colspan="2">4</td>
+            <td colspan="2">5</td>
+            <td colspan="2">6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td colspan="2">5</td>
+            <td colspan="2">6</td>
+            <td colspan="2">7</td>
+            <td colspan="2">8</td>
+            <td colspan="2">9</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+        </table>
+      </section>
+      <section> <!-- Блок с формой -->
+        <h2>Форма</h2>
+        <form id="myForm">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+
+          <input type="submit" value="Отправить">
+        </form>
+      </section>
+
+      <section> <!-- Блок с анимированной кнопкой -->
+        <h2>Анимированная кнопка</h2>
+        <button id="animatedButton" class="animated-button">Нажми меня!</button>
+      </section>
+      <section> <!-- Блок с таблицей -->
+        <h2>Список продуктов</h2>
+        <table border="1" style="border-collapse: collapse; width: 100%;">
+          <thead>
+          <tr>
+            <th>Название</th>
+            <th>Цена</th>
+          </tr>
+          </thead>
+          <tbody id="productTableBody">
+          <!-- Данные будут добавлены сюда с помощью JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    <h1>Загрузка файла</h1>
+    <div class="drop-area" id="drop-area">
+      Перетащите файл сюда
+    </div>
+    <button id="downloadButton" class="animated-button" style="display: none;">Скачать файл</button>
+
+    </main>
+
+    <footer> <!-- Подвал сайта -->
+      <p>&copy; 2024 Проверочная работа</p>
+    </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
